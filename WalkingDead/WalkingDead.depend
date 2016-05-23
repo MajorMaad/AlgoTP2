@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1464033376 source:/home/major/Documents/Projets Git/AlgoTP2/WalkingDead/main.cpp
+1464037755 source:/home/major/Documents/Projets Git/AlgoTP2/WalkingDead/main.cpp
 	<iostream>
 	"FileParser.h"
+	"Algorithm1.h"
 
 1464033285 /home/major/Documents/Projets Git/AlgoTP2/WalkingDead/include/FileParser.h
 	<stdlib.h>
@@ -10,6 +11,12 @@
 	<fstream>
 	<map>
 
-1464033343 source:/home/major/Documents/Projets Git/AlgoTP2/WalkingDead/src/FileParser.cpp
+1464033398 source:/home/major/Documents/Projets Git/AlgoTP2/WalkingDead/src/FileParser.cpp
+	"FileParser.h"
+
+1464037766 /home/major/Documents/Projets Git/AlgoTP2/WalkingDead/include/Algorithm1.h
+	<string>
+	<vector>
+	<map>
 	"FileParser.h"
 

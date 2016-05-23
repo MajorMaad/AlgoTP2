@@ -1,5 +1,6 @@
 #include <iostream>
 #include "FileParser.h"
+#include "Algorithm1.h"
 
 using namespace std;
 
@@ -24,6 +25,10 @@ int main()
     // Test recuperation du nombre de tours
     int nbTowers = fp.retrieveNbTowers();
     cout << "Nombre de tours : " << nbTowers << endl;
+
+    // Test algo 1
+    Algorithm1 a("fichiers-test/T_7_30.txt");
+    a.displayResult();
 
     return 0;
 }
