@@ -9,12 +9,12 @@ int main()
     FileParser fp("fichiers-test/T_7_30.txt");
 
     // Test recuperation des tours
-    map<int, int> towers = fp.retrieveTowers();
+    map<int, pair<int, int> > towers = fp.retrieveTowers();
 
-    map<int, int>::iterator p;
+    map<int, pair<int, int> >::iterator p;
 
     for (p = towers.begin(); p!= towers.end(); p++) {
-        cout << "Distance : " << p->first << " --- Estimation : " << p->second << endl;
+        cout << "Tour n°" << p->first << " --- Distance : " << p->second.first << " --- Estimation : " << p->second.second << endl;
     }
 
     // Test recuperation du nombre de tireurs

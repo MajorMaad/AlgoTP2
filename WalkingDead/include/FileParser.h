@@ -14,7 +14,7 @@ class FileParser
     public:
         FileParser(string file);
         virtual ~FileParser();
-        map<int, int> retrieveTowers();
+        map<int, pair<int, int> > retrieveTowers();
         int retrieveNbShooters();
         int retrieveNbTowers();
 

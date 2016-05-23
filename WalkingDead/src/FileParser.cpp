@@ -10,8 +10,8 @@ FileParser::~FileParser()
     //dtor
 }
 
-map<int, int> FileParser::retrieveTowers() {
-    map<int, int> towers; // Map distance-estimation des tours
+map<int, pair<int, int> > FileParser::retrieveTowers() {
+    map<int, pair<int, int> > towers; // Map distance-estimation des tours
 
     ifstream flux(this->file.c_str());
     string delimiter = "\t"; // Délimiteur entre la distance et l'estimation
@@ -19,6 +19,7 @@ map<int, int> FileParser::retrieveTowers() {
     if (flux) {
         string ligne;
         int i = 0;
+        int j = 1;
 
         while (getline(flux, ligne)) {
             if (i > 1) { // Les deux premières lignes représentent le nombre de tireurs et de tours
@@ -28,8 +29,9 @@ map<int, int> FileParser::retrieveTowers() {
 
                 int distance = atoi(distanceStr.c_str());
                 int estimate = atoi(estimateStr.c_str());
+                pair<int, int> p = make_pair(distance, estimate);
 
-                towers[distance] = estimate;
+                towers[j++] = p;
             }
 
             i++;
